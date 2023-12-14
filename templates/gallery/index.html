@@ -1,0 +1,7 @@
+{%extends "blog/base.html"%}
+{%block content%}
+    <h1>GALLERY</h1>
+    {%for photo in photos%}
+    <img src="{{photo.image.url}}" alt="{{photo.description}}", width="600em",>
+    {%endfor%}
+{%endblock%}

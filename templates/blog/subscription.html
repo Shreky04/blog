@@ -1,0 +1,9 @@
+{%extends "blog/base.html"%}
+{%block content%}
+<h2> Subscribe to get updates</h2>
+<form action="{%url 'subscribe'%}" method="POST" id="subscribeform">
+    {%csrf_token%}
+    {{form.as_p}}
+    <input type="submit" value="Subscribe" class="btn btn-danger">
+</form>
+{%endblock%}

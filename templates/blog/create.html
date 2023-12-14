@@ -1,0 +1,15 @@
+<style>
+    #createform{
+        border-radius: 30px;
+    }
+</style>
+
+{%extends "blog/base.html"%}
+{%block content%}
+<h2> Create new  post</h2>
+<form action="{%url 'create'%}" method="POST" id="createform">
+    {%csrf_token%}
+    {{form.as_p}}
+    <input type="submit" value="Save" class="btn btn-default">
+</form>
+{%endblock%}
